@@ -1,0 +1,17 @@
+import random
+from re import A
+word_list = ['ardvark', 'baboon','camel']
+
+word = random.choice(word_list)
+
+display = list('-' * len(word))
+
+letter = input('Guess a letter: ')
+
+for i in word:
+    if i == letter:
+        display[word.index(i)] = letter
+
+print(word)    
+print(display)
+
